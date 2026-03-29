@@ -22,10 +22,10 @@ if __name__ == "__main__":
     print("=== Garden Plant Growth ===")
 
     for day in range(1, 8):
-        print(f"=== Day {day}: ===")
+        print(f"=== Day {day} ===")
+        rose.get_info()
         rose.grow()
         rose.age_plant()
-        rose.get_info()
 
     growth_week = rose.height - start_height
-    print(f"Growth this week: {growth_week:.1f}cm")
+    print(f"Growth this week: {round(growth_week)}cm")

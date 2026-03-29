@@ -14,7 +14,7 @@ class Plant:
             print("Height update rejected")
         else:
             self._height = value
-            print("Height updated")
+            print("Height updated:")
             print(f"{self._height}cm")
 
     def set_age(self, value):
@@ -23,7 +23,7 @@ class Plant:
             print("Age update rejected")
         else:
             self._age = value
-            print("Age updated")
+            print("Age updated:")
             print(f"{self._age} days")
 
     def get_height(self):

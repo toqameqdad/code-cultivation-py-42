@@ -12,7 +12,7 @@ def create_garden():
     plants = [
         Plant("Rose", 25, 30),
         Plant("Oak", 200, 365),
-        Plant("Cactus", 15, 120),
+        Plant("Cactus", 5, 90),
         Plant("Sunflower", 80, 45),
         Plant("Fern", 15, 120),
     ]
