@@ -21,8 +21,8 @@ class Plant:
         self.height += 1
         self.stats.grow_calls += 1
 
-    def age_plant(self):
-        self.age += 1
+    def age_plant(self, days=1):
+        self.age += days
         self.stats.age_calls += 1
 
     def get_info(self):
@@ -108,47 +108,41 @@ class Seed(Flower):
 
 
 if __name__ == "__main__":
-    print("=== Garden statistics ===\n")
+    print("=== Garden statistics ===")
 
     print("=== Check year-old")
     print(f"Is 30 days more than a year? -> {Plant.is_older_than_years(30)}")
-    print(
-        f"Is 400 days more than a year? -> "
-        f"{Plant.is_older_than_years(400)}\n"
-    )
+    print(f"Is 400 days more than a year? -> {Plant.is_older_than_years(400)}")
+
     print("=== Flower")
     rose = Flower("Rose", 15, 10, "red")
     rose.get_info()
     rose.show_statistics()
-
-    print("\n[asking the rose to grow and bloom]")
+    print("[asking the rose to grow and bloom]")
     rose.grow()
     rose.bloom()
     rose.get_info()
     rose.show_statistics()
 
-    print("\n=== Tree")
+    print("=== Tree")
     oak = Tree("Oak", 200, 365, 5)
     oak.get_info()
     oak.show_statistics()
-
-    print("\n[asking the oak to produce shade]")
+    print("[asking the oak to produce shade]")
     oak.produce_shade()
-    oak.get_info()
     oak.show_statistics()
 
-    print("\n=== Seed")
+    print("=== Seed")
     sunflower = Seed("Sunflower", 80, 45, "yellow")
     sunflower.get_info()
-
-    print("\n[make sunflower grow, age and bloom]")
+    print("[make sunflower grow, age and bloom]")
     sunflower.grow()
-    sunflower.age_plant()
+    sunflower.age_plant(20)  # تحديث العمر مرة واحدة لتوافق المثال
     sunflower.bloom()
     sunflower.get_info()
     sunflower.show_statistics()
 
-    print("\n=== Anonymous")
+    print("=== Anonymous")
     unknown = Plant.anonymous()
     unknown.get_info()
     unknown.show_statistics()
